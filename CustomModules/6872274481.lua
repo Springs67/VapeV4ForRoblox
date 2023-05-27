@@ -10174,6 +10174,7 @@ runFunction(function()
 					block.Anchored = true
 					block.CanCollide = false
 					block.Parent = gameCamera
+                    block.Transparency = 0
 					controlmodule.moveFunction = function(Self, vec, facecam, ...)
 						if entityLibrary.isAlive then
 							local plr = AllNearPosition(TargetStrafeRange.Value + 5, 10)[1]
@@ -10215,7 +10216,8 @@ runFunction(function()
 		Name = "Range",
 		Min = 0,
 		Max = 18,
-		Function = function() end
+		Function = function() end,
+        Default = 8
 	})
 end)
 
